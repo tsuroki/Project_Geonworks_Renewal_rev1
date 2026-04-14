@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 상단 */
+        @font-face {
+            font-family: 'GMarketSans';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+            font-weight: 300;
+            font-display: swap;
+        }
+        #header {
+            font-family: GmarketSans, sans-serif;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0;
+            background: #fff;
+            position: relative;
+            z-index: 998;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        #header .inner {
+            max-width: 1760px;
+            width: 92%;
+            margin: 0 auto;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #header .inner .toparea {
+            width: 100%;
+            height: 50px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transform: translateY(0);
+            position: relative;
+            z-index: 11;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            width:max-content;
+            transform: translateY(2px);
+        }
+
+        #header .inner .toparea .toparea_shoppinginfo {
+            display: flex;
+            align-items: center;
+        }
+
+        #header .inner .toparea .toparea_shoppinginfo .xans-layout-multishoplist {
+            position: relative;
+            z-index: 10;
+            height: 50px;
+            margin-right: 30px;
+        }
+
+        #header .inner .toparea .toparea_shoppinginfo .xans-layout-multishoplist .toggle {
+            display: flex;
+            align-items: center;
+            height: 50px;
+            padding: 0;
+            color: #666;
+            line-height: 1;
+            font-size: 13px;
+        }
+
+        #header .inner .toparea .toparea_shoppinginfo .xans-layout-multishoplist .toggle .icon {
+            border-color: #666;
+            width: 5px;
+            height: 5px;
+            margin-left: 10px;
+        }
+
+        #header .inner .toparea .toparea_shoppinginfo .xans-layout-multishoplist>ul {
+            visibility: hidden;
+            height: 0;
+            padding: 0 10px;
+            border: 1px solid #999;
+            background: #fff;
+            margin-top: -5px;
+        }
+
+        #header .inner .toparea .toparea_shoppinginfo .xans-layout-multishoplist>ul li {
+            position: relative;
+            margin: 9px 0;
+        }
+
+        #header .inner .toparea .toparea_shoppinginfo .xans-layout-multishoplist>ul li a {
+            display: block;
+            overflow: hidden;
+            font-size: 12px;
+            white-space: nowrap;
+            text-decoration: none;
+            text-overflow: ellipsis;
+        }
+
+        #header .inner .toparea .toparea_shoppinginfo .xans-layout-multishoplist.show>ul {
+            visibility: visible;
+            height: auto;
+        }
+
+        #header .inner .toparea .toparea_shoppinginfo .xans-layout-shoppinginfo {
+            display: flex;
+            flex-shrink: 0;
+        }
+
+        #header .inner .toparea .toparea_shoppinginfo .xans-layout-shoppinginfo li {
+            margin: 0 10px 0 0;
+        }
+
+        #header .inner .toparea .toparea_shoppinginfo .xans-layout-shoppinginfo li a {
+            color: #6a6a6a;
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+        #header .inner .toparea .toparea_shoppinginfo .xans-layout-shoppinginfo li,
+        #header .inner .toparea .toparea_shoppinginfo .xans-layout-shoppinginfo li strong {
+            color: #6a6a6a;
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+        #header .inner .toparea .toparea_shoppinginfo .xans-layout-shoppinginfo li a strong {
+            color: #6a6a6a;
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+        #header .inner .toparea .toparea_shoppinginfo .xans-layout-shoppinginfo li a:hover,
+        #header .inner .toparea .toparea_shoppinginfo .xans-layout-shoppinginfo li a:hover strong {
+            color: #000;
+        }
+
+        #header .inner .toparea .toparea_state {
+            display: flex;
+        }
+
+        #header .inner .toparea .toparea_state a {
+            font-size: 12px;
+            line-height: 1;
+            color: #6a6a6a;
+            display: flex;
+            align-items: center;
+            margin: 0 0 0 9px;
+            padding: 0 0 0 10px;
+            background: url("//img.echosting.cafe24.com/skin/base/common/ico_bar.gif") no-repeat 0 center;
+        }
+
+        #header .inner .toparea .toparea_state a:first-child {
+            background: none;
+        }
+
+        #header .inner .toparea .toparea_state a:hover {
+            color: #000;
+        }
+
+        #header .inner .toparea .toparea_state .toparea_state_board {
+            position: relative;
+        }
+
+        #header .inner .toparea .toparea_state .toparea_state_board>a {
+            display: flex;
+            align-items: center;
+            background: url("//img.echosting.cafe24.com/skin/base/common/ico_bar.gif") no-repeat 0 center;
+        }
+
+        #header .inner .toparea .toparea_state .toparea_state_board>a .icon {
+            width: 5px;
+            height: 5px;
+            margin-left: 10px;
+            margin-top: -4px;
+        }
+
+        #header .inner .toparea .toparea_state .toparea_state_board>ul {
+            display: none;
+            position: absolute;
+            top: 25px;
+            right: -10px;
+            z-index: 1;
+            padding: 5px 10px;
+            border: 1px solid #999;
+            background: #fff;
+        }
+
+        #header .inner .toparea .toparea_state .toparea_state_board.on>ul {
+            display: block;
+        }
+
+        #header .inner .toparea .toparea_state .toparea_state_board>ul li {
+            position: relative;
+            padding: 7px 0;
+        }
+
+        #header .inner .toparea .toparea_state .toparea_state_board>ul li a {
+            display: block;
+            overflow: hidden;
+            font-size: 12px;
+            line-height: 1;
+            color: #666;
+            white-space: nowrap;
+            text-decoration: none;
+            text-overflow: ellipsis;
+            padding: 0;
+            margin: 0;
+        }
+
+        #header .inner .toparea .toparea_state .toparea_state_board>ul li a:hover {
+            color: #000;
+        }
+
+        /* 상단 메뉴 */
+        #header .inner .top_nav_box {
+            width: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: #fff;
+            position: relative;
+        }
+
+        #header .inner .top_nav_box .top_logo {
+            margin: 0 auto;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-basis: 100%;
+            flex-shrink: 0;
+        }
+
+        #header .inner .top_nav_box .top_logo img {
+            max-width: 400px;
+            max-height: 60px;
+        }
+
+        #header .inner .top_nav_box .top_logo a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            line-height: 1;
+        }
+
+        #header .inner .top_nav_box .top_nav {
+            display: none;
+            flex-shrink: 0;
+            position: absolute;
+            top: 70px;
+            left: 0;
+        }
+
+        #header .inner .top_nav_box .top_nav .eNavFold {
+            width: 25px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+        }
+
+        #header .inner .top_nav_box .top_nav .eNavFold .icon.icoNav {
+            width: 25px;
+            box-shadow: 0 18px 0;
+            margin: -18px auto 0;
+        }
+
+        #header .inner .top_nav_box .top_nav .eNavFold .icon.icoNav:before {
+            width: 25px;
+            top: 9px;
+        }
+
+        #header .inner .top_nav_box div[data-ez-module='menu-main/1'] {
+            width: 100%;
+        }
+
+        #header .inner .top_nav_box .top_category {
+            margin: 0 130px;
+            position: relative;
+        }
+
+        #header .inner .top_nav_box .top_category>ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #header .inner .top_nav_box .top_category>ul>li {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            padding: 0 25px;
+            position: relative;
+        }
+
+        #header .inner .top_nav_box .top_category>ul>li>a {
+            font-size: 22px;
+            font-weight: 500;
+            display: block;
+            line-height: 78px;
+            color: #3a3a3a;
+            white-space: nowrap;
+        }
+
+        #header .inner .top_nav_box .top_category>ul>li>a:after {
+            content: "";
+            position: relative;
+            display: block;
+            bottom: 0px;
+            width: 100%;
+            height: 2px;
+            background-color: #cfcfcf;
+            -webkit-transform: scaleX(0);
+            -ms-transform: scaleX(0);
+            transform: scaleX(0);
+            -webkit-transform-origin: 100% 0;
+            -ms-transform-origin: 100% 0;
+            transform-origin: 100% 0;
+            -webkit-transition: -webkit-transform .3s cubic-bezier(.45, .46, .05, .96);
+            -o-transition: transform .3s cubic-bezier(.45, .46, .05, .96);
+            transition: transform .3s cubic-bezier(.45, .46, .05, .96);
+            transition: transform .3s cubic-bezier(.45, .46, .05, .96), -webkit-transform .3s cubic-bezier(.45, .46, .05, .96);
+        }
+
+        #header .inner .top_nav_box .top_category>ul>li:hover>a:after {
+            -webkit-transform: scaleX(1);
+            -ms-transform: scaleX(1);
+            transform: scaleX(1);
+            -webkit-transform-origin: 0 0;
+            -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+            -webkit-transition: -webkit-transform .5s cubic-bezier(.45, .46, .05, .96);
+            -o-transition: transform .5s cubic-bezier(.45, .46, .05, .96);
+            transition: transform .5s cubic-bezier(.45, .46, .05, .96);
+            transition: transform .5s cubic-bezier(.45, .46, .05, .96), -webkit-transform .5s cubic-bezier(.45, .46, .05, .96);
+        }
+
+        #header .inner .top_nav_box .top_category .sub_cate01 {
+            position: absolute;
+            top: 80px;
+            left: 0;
+            z-index: 10;
+            margin: 0;
+            width: auto;
+            min-width: 120px;
+            padding: 10px 0;
+            background-color: #fff;
+            border: 1px solid #e8e8e8;
+            display: none;
+        }
+
+        #header .inner .top_nav_box .top_category li.on .sub_cate01 {
+            display: block;
+        }
+
+        #header .inner .top_nav_box .top_category .sub-category {
+            position: absolute;
+            top: 80px;
+            left: 0;
+            z-index: 10;
+            margin: 0;
+            width: auto;
+            min-width: 120px;
+            padding: 10px 0;
+            background-color: #fff;
+            border: 1px solid #e8e8e8;
+        }
+
+        #header .inner .top_nav_box .top_category .sub_cate01 ul,
+        #header .inner .top_nav_box .top_category .sub-category ul {
+            display: none;
+            position: absolute;
+            top: -11px;
+            left: 100%;
+            z-index: 11;
+            margin: 0;
+            width: auto;
+            min-width: 120px;
+            padding: 10px 0;
+            background-color: #fff;
+            border: 1px solid #e8e8e8;
+        }
+
+        #header .inner .top_nav_box .top_category .sub_cate01 li.on>ul,
+        #header .inner .top_nav_box .top_category .sub-category li.on>ul {
+            display: block;
+        }
+
+        #header .inner .top_nav_box .top_category .sub_cate01 li,
+        #header .inner .top_nav_box .top_category .sub-category li {
+            position: relative;
+            padding: 0 10px 0 10px;
+        }
+
+        #header .inner .top_nav_box .top_category .sub_cate01 li:after,
+        #header .inner .top_nav_box .top_category .sub-category li:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            margin-top: -3px;
+            background: url('/SkinImg/img/arrow.png') no-repeat;
+            z-index: 10;
+            width: 4px;
+            height: 7px;
+        }
+
+        #header .inner .top_nav_box .top_category .sub_cate01 li.noChild:after,
+        #header .inner .top_nav_box .top_category .sub-category li.noChild:after {
+            display: none;
+        }
+
+        #header .inner .top_nav_box .top_category .sub_cate01 li a,
+        #header .inner .top_nav_box .top_category .sub-category li a {
+            font-size: 14px;
+            color: #9a9a9a;
+            line-height: 1;
+            font-weight: 400;
+            display: block;
+            padding: 10px 20px 10px 10px;
+            white-space: nowrap;
+            text-align: center;
+        }
+
+        #header .inner .top_nav_box .top_category .sub_cate01 li:hover>a,
+        #header .inner .top_nav_box .top_category .sub-category li:hover>a {
+            background-color: #fff;
+            color: #000;
+        }
+
+        #header .inner .top_nav_box .top_mypage {
+            display: flex;
+            flex-shrink: 0;
+            position: absolute;
+            top: 70px;
+            right: 0;
+            height: 80px;
+        }
+
+        #header .inner .top_nav_box .top_mypage a {
+            line-height: 1;
+            color: #1a1a1a;
+            margin-left: 26px;
+            padding: 0;
+            border: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        #header .inner .top_nav_box .top_mypage a:first-child {
+            margin-left: 0;
+        }
+
+        #header .inner .top_nav_box .top_mypage a.xans-layout-orderbasketcount .count {
+            position: absolute;
+            top: 40px;
+            right: -10px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            line-height: 1;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 5px;
+        }
+
+        #header.fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 998;
+            margin: 0 auto;
+            border-bottom: 1px solid #e8e8e8 !important;
+            -webkist-transform: translateY(-60px);
+            -ms-transform: translateY(-60px);
+            transform: translateY(-60px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_top_banner ez-align-center" data-ez-module="top-banner" data-ez-align="center"
+        data-ez-role="style.color" data-ez-display="visible" data-ez="contents-1v1beuy-1" style>
+        <div class="top_banner_box_inner">
+            <div class="top_banner_text">
+                <!-- 최상단 배너 수정하는곳 -->
+                <a data-ez-role="a" href="http://smartstore.naver.com/geonlab"
+                    data-href="http://smartstore.naver.com/geonlab" target="_blank"
+                    style="color: rgb(255, 0, 0); font-weight: 400;">네이버 GEONWORKS 지온웍스 한국 공식 스마트 스토어를 이용 바랍니다. (클릭 시
+                    스마트 스토어로 이동 합니다.)</a>
+            </div><!-- //top_banner_text -->
+
+
+            <div class="top_banner_close" data-ez-role="close" style="display: none;">
+                <input type="checkbox" name="chkbox" id="top_banner_box_cloase" value="1"
+                    data-ez-role="disable-term"><label for="top_banner_box_cloase" data-ez-role="disable-text">오늘 하루 보지
+                    않기</label>
+                <i aria-hidden="true" class="icon icoClose">닫기</i>
+            </div><!-- //top_banner_close -->
+        </div><!-- //top_banner_box_inner -->
+    </div>
+    <header id="header" class="layout3" data-ez-layout="layout3" data-ez="contents-1nbwjdk-1"
+        style="margin-bottom: 0px;">
+        <ez-prop data-version="1.0.0" type="layout">
+            <ez-var data-prop="layout" data-namespace="ez.layout.header.layout" data-type="array">
+                <ez-item data-id="layout3" data-name="1단 기본형"></ez-item>
+                <ez-item data-id="layout2" data-name="2단 좌측형"></ez-item>
+                <ez-item data-id="layout4" data-name="2단 혼합형"></ez-item>
+                <ez-item data-id="layout1" data-name="2단 중앙형 (아이콘 하단)"></ez-item>
+                <ez-item data-id="layout5" data-name="2단 중앙형 (아이콘 상단)"></ez-item>
+            </ez-var>
+        </ez-prop>
+        <div class="inner">
+            <div class="toparea display_pc_only">
+                <div class="toparea_shoppinginfo">
+                    <div module="Layout_multishopList">
+                        <button type="button" class="toggle">{$current_language} <i aria-hidden="true"
+                                class="icon icoArrowBottom"></i></button>
+                        <ul module="Layout_multishopListitem">
+                            <li class="{$selected_class}">
+                                <a href="//{$shop_domain}/">{$locale_language}</a>
+                            </li>
+                            <li class="{$selected_class}">
+                                <a href="//{$shop_domain}/">{$locale_language}</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div data-ez-group="shopping-info" data-ez-role="list">
+                        <ul module="Layout_shoppingInfo">
+                            <li class="{$use_mileage|display}"><a
+                                    href="/myshop/mileage/historyList.html">{$mileage_name}
+                                    <strong>{$mileage}</strong></a></li>
+                            <li class="{$use_deposit|display}"><a
+                                    href="/myshop/deposits/historyList.html">{$deposit_name}
+                                    <strong>{$deposit}</strong></a></li>
+                            <li class="{$use_interest_prd|display}"><a href="/myshop/wish_list.html">관심상품
+                                    <strong>{$interest_prd_cnt}</strong></a></li>
+                        </ul>
+                    </div>
+                </div><!-- //toparea_shoppinginfo -->
+
+                <div class="toparea_state" data-ez-group="top-util-menu" data-ez-role="list">
+                    <a data-ez-item="join" module="Layout_statelogoff" href="/member/agreement.html"
+                        style="color: rgb(#222); font-weight: 400;">회원가입</a>
+                    <a data-ez-item="login" module="Layout_statelogoff" href="/member/login.html"
+                        style="color: rgb(#222); font-weight: 400;">로그인</a>
+                    <a data-ez-item="modify" module="Layout_stateLogon" href="/member/modify.html">내정보수정</a>
+                    <a data-ez-item="logout" module="Layout_stateLogon" href="{$action_logout}"
+                        style="color: rgb(#222);">로그아웃</a>
+                    <a data-ez-item="order" href="/myshop/order/list.html">주문조회</a>
+                    <a data-ez-item="mypage" module="Layout_stateLogon" href="/myshop/index.html">마이페이지</a>
+                    <div class="toparea_state_board">
+                        <ul module="Layout_BoardInfo">
+                            <li><a href="{$link_board_list}">{$board_name}</a></li>
+                            <li><a href="{$link_board_list}">{$board_name}</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //toparea_state -->
+            </div><!-- //toparea -->
+
+            <div class="top_nav_box" id="top_nav_box">
+                <div class="top_logo" module="Layout_LogoTop"><a href="/"><img src="{$logo}" alt="{$mall_name}"></a>
+                </div><!-- //top_logo -->
+                <div class="top_nav"><a href="javascript:;" class="eNavFold"><i aria-hidden="true"
+                            class="icon icoNav"></i></a></div>
+
+                <div data-ez-module="menu-main/1" data-ez-mode="manual">
+                    <div class="xans-element- xans-layout xans-layout-category top_category">
+                        <ul>
+                            <li><a href="https://geonworks.kr">Home</a></li>
+                            <li><a href="/category/Products/47/">Products</a>
+                                <ul class="sub_cate01">
+                                    <li><a
+                                            href="https://geonworks.kr/category/%EB%93%9C%EB%9E%8D%ED%8C%90%EB%A7%A4/81/">드랍판매</a>
+                                    </li>
+                                    <li><a href="/category/Keyboards/24/">Keyboards</a>
+                                        <ul class="sub_cate02">
+                                            <li><a href="/category/F1-8X/49/">F1-8X</a></li>
+                                            <li><a href="/category/F2-84/53/">F2-84</a></li>
+                                            <li><a href="/category/FROG-TKL/50/">FROG TKL</a></li>
+                                            <li><a href="/category/FROG-MINI/51/">FROG MINI</a></li>
+                                            <li><a href="/category/GLARE-TKL/55/">GLARE TKL</a></li>
+                                            <li><a href="/category/GLARE-65/56/">GLARE 65</a></li>
+                                            <li><a href="/category/TIGER-LITE/54/">TIGER LITE</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/category/PCBs/25/">PCBs</a></li>
+                                    <li><a href="/category/Plates/26/">Plates</a></li>
+                                    <li><a href="/category/Keycaps/27/">Keycaps</a>
+                                        <ul class="sub_cate02">
+                                            <li><a href="/category/%EC%9D%B4%EC%A4%91%EC%82%AC%EC%B6%9C/73/">이중사출</a>
+                                                <ul class="sub_cate03">
+                                                    <li><a href="/category/GMK/65/">GMK</a></li>
+                                                    <li><a href="/category/KEY-KOBO/66/">KEY KOBO</a></li>
+                                                    <li><a href="/category/PBTfans/72/">PBTfans</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="/category/%EC%97%BC%EB%A3%8C%EC%8A%B9%ED%99%94/68/">염료승화</a>
+                                                <ul class="sub_cate03">
+                                                    <li><a href="/category/TUT/67/">TUT</a></li>
+                                                    <li><a href="/category/Milkyway/69/">Milkyway</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/category/Tools/42/">Tools</a></li>
+                                    <li><a href="/category/Accessories/43/">Accessories</a></li>
+                                    <li><a href="/category/%EC%98%88%EC%95%BD%ED%8C%90%EB%A7%A4/75/">예약판매</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Contacts</a>
+                                <ul class="sub_cate01">
+                                    <li><a href="https://m.site.naver.com/1IEIB">Guide</a></li>
+                                    <li><a href="/board/1:1-%EB%AC%B8%EC%9D%98/9/">취소 문의</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Links</a>
+                                <ul class="sub_cate01">
+                                    <li><a href="https://discord.com/invite/geon">Discord</a></li>
+                                    <li><a href="https://smartstore.naver.com/geonlab">스마트스토어</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/board/%EC%8A%A4%ED%86%A0%EC%96%B4-%EC%A0%95%EC%B1%85/3/">스토어 정책</a></li>
+                        </ul>
+                    </div>
+                </div><!-- //menu-main/1 -->
+
+                <div class="top_mypage">
+                    <a href="javascript:;" class="eSearch"><!--@import(/svg/icon-search.html)--></a>
+                    <a href="/myshop/index.html"><!--@import(/svg/icon-user.html)--></a>
+                    <a href="/order/basket.html"
+                        module="Layout_orderBasketcount"><!--@import(/svg/icon-cart.html)--><span
+                            class="count {$basket_count_display|display} {$basket_count_display_class}"><span
+                                class="{$basket_count_class}">{$basket_count}</span></span></a>
+                </div><!-- //top_mypage -->
+            </div><!-- //top_nav_box -->
+        </div><!-- //inner -->
+    </header>
+</body>
+
+</html>

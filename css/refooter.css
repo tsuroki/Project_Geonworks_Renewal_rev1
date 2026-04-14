@@ -1,0 +1,21 @@
+body {
+    margin: 50px 100px;
+}
+body #footer {
+    width: 100%;
+    height: fit-content;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    display: flex;
+}
+body #footer .footer_wrapper{
+}
+body #footer .footer_wrapper .footer_gnb {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 14px;
+    gap: 30px;
+}

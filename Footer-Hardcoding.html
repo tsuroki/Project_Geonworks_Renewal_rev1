@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer</title>
+    <link rel="stylesheet" href="./css/refooter.css">
+</head>
+
+<body>
+    <footer id="footer" class="layout1" data-ez-layout="layout1" data-ez="contents-1qtu19u-1">
+        <div class="footer_wrapper bt_util" data-ez-group="shortcut">
+            <ul class="footer_gnb" data-ez-role="list">
+                <li data-ez-item="company"><a href="/shopinfo/company.html">Notice</a></li>
+                <li data-ez-item="agreement"><a href="/member/mall_agreement.html">FAQ</a></li>
+                <li data-ez-item="privacy"><a href="/member/privacy.html">QC 정책</a></li>
+                <li data-ez-item="guide"><a href="/shopinfo/guide.html">About us</a></li>
+            </ul>
+            <!-- //bt_logo -->
+            <h1 class="bt_logo" module="Layout_LogoBottom">
+                <a href="#">
+                    <img src="{$logo}" alt="{$mall_name}">
+                </a>
+            </h1>
+            <!-- //bt_logo -->
+            <div class="company_information bt_info" data-ez-group="info">
+               <h2>고객센터 정보</h2>
+                <div class="example">
+                    <span><strong>상담/주문 이메일</strong></span>
+                    <span>채널톡 혹은 네이버 톡톡 문의</span>
+                </div>
+                <div class="timeAndInfo">
+                    <div class="cstime">
+                        <span><strong>CS 운영시간</strong></span>
+                        <span>9:00 a.m ~ 5:00 p.m.</span>
+                    </div>
+                    <div class="purchase_info">
+                        <span><strong>결제정보</strong></span>
+                        <span>무통장 계좌 정보</span>
+                    </div>
+                    <div class="qa_call">
+                        <span><strong>상담 주문 전화</strong></span>
+                        <span>010-2529-0780</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_company_info bt_cscenter" module="Layout_Info" data-ez-group="cs">
+            <div class="title" data-ez-role="title" style="text-transform: uppercase;">company information</div>
+            <div data-ez-role="list">
+                <div class="social_networking">
+                    <h2>Social Networking Service</h2>
+                    <ul class="sns_icon-wrapper"> <!-- icon = 30x30 -->
+                        <li><a href="#"><img src="#" alt="youtube"></a></li>
+                        <li><a href="#"><img src="#" alt="twitch"></a></li>
+                        <li><a href="#"><img src="#" alt="instagram"></a></li>
+                        <li><a href="#"><img src="#" alt="discord"></a></li>
+                    </ul>
+                </div>
+                <div class="company_president_information">
+                    <div class="conpany_content_wrapper" data-ez-item="company_name"><!-- displa -->
+                        <span data-ez-role="field">상호명</span>
+                        <span data-ez-role="value">{$company_name}</span>
+                    </div>
+                    <div data-ez-item="president_name">
+                        <span data-ez-role="field">대표자명</span>
+                        <span data-ez-role="value">{$president_name}</span>
+                    </div>
+                </div>
+                <div data-ez-item="address">
+                    <span data-ez-role="field">사업장 주소</span>
+                    <span data-ez-role="value">{$mall_zipcode} {$mall_addr1} {$mall_addr2}</span>
+                </div>
+            </div>
+            <div data-ez-item="phone">
+                <span data-ez-role="field">대표 전화</span>
+                <span data-ez-role="value">{$phone}</span>
+            </div>
+            <div data-ez-item="company_regno">
+                <span data-ez-role="field">사업자 등록번호</span>
+                <span data-ez-role="value">{$company_regno}</span>
+            </div>
+            <div data-ez-item="network_regno">
+                <span data-ez-role="field">통신판매업 신고번호</span>
+                <span data-ez-role="value">{$network_regno} {$biz_no_link}</span>
+            </div>
+            <div data-ez-item="cpo_name">
+                <span data-ez-role="field">개인정보보호책임자</span>
+                <span data-ez-role="value">{$cpo_name}</span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

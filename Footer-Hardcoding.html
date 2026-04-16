@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Footer</title>
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/refooter.css">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <script src="./js/custumjs.js" defer></script>
 </head>
 
 <body>
@@ -24,16 +27,17 @@
                 </a>
             </h1>
             <!-- //bt_logo -->
+             <!-- company_info -->
             <div class="company_information bt_info" data-ez-group="info">
-               <h2>고객센터 정보</h2>
-                <div class="example">
+                <h2>고객센터 정보</h2>
+                <div data-ez-item="email" class="bt_txt02">
                     <span><strong>상담/주문 이메일</strong></span>
                     <span>채널톡 혹은 네이버 톡톡 문의</span>
                 </div>
                 <div class="timeAndInfo">
-                    <div class="cstime">
+                    <div data-ez-item="runtime" class="bt_txt02">
                         <span><strong>CS 운영시간</strong></span>
-                        <span>9:00 a.m ~ 5:00 p.m.</span>
+                        <span>{$runtime}</span>
                     </div>
                     <div class="purchase_info">
                         <span><strong>결제정보</strong></span>
@@ -41,53 +45,54 @@
                     </div>
                     <div class="qa_call">
                         <span><strong>상담 주문 전화</strong></span>
-                        <span>010-2529-0780</span>
+                        <span>{$phone}</span>
                     </div>
                 </div>
             </div>
         </div>
         <div class="footer_company_info bt_cscenter" module="Layout_Info" data-ez-group="cs">
-            <div class="title" data-ez-role="title" style="text-transform: uppercase;">company information</div>
-            <div data-ez-role="list">
+            <div class="right_wrapper" data-ez-role="list">
                 <div class="social_networking">
                     <h2>Social Networking Service</h2>
-                    <ul class="sns_icon-wrapper"> <!-- icon = 30x30 -->
-                        <li><a href="#"><img src="#" alt="youtube"></a></li>
-                        <li><a href="#"><img src="#" alt="twitch"></a></li>
-                        <li><a href="#"><img src="#" alt="instagram"></a></li>
-                        <li><a href="#"><img src="#" alt="discord"></a></li>
+                    <ul class="snsicon" data-ez-role="title">
+                        <li><a data-ez-item="instagram" href="https://instagram.com/geonworks" target="_blank"></a></li>
+                        <li><a data-ez-item="youtube" href="https://www.youtube.com/@geonkr" target="_blank"></a></li>
+                        <li><a data-ez-item="twitch" href="https://www.twitch.tv/geonworks" target="_blank"></a></li>
+                        <li><a data-ez-item="discord" href="https://discord.gg/4NTq9cdu" target="_blank"> </a></li>
                     </ul>
                 </div>
                 <div class="company_president_information">
-                    <div class="conpany_content_wrapper" data-ez-item="company_name"><!-- displa -->
-                        <span data-ez-role="field">상호명</span>
+                    <div class="company_name" data-ez-item="company_name"><!-- displa -->
+                        <span data-ez-role="field"><strong>상호명</strong></span>
                         <span data-ez-role="value">{$company_name}</span>
                     </div>
-                    <div data-ez-item="president_name">
-                        <span data-ez-role="field">대표자명</span>
+                    <div class="president_name" data-ez-item="president_name">
+                        <span data-ez-role="field"><strong>대표자명</strong></span>
                         <span data-ez-role="value">{$president_name}</span>
                     </div>
                 </div>
                 <div data-ez-item="address">
-                    <span data-ez-role="field">사업장 주소</span>
+                    <span data-ez-role="field"><strong>사업장 주소</strong></span>
                     <span data-ez-role="value">{$mall_zipcode} {$mall_addr1} {$mall_addr2}</span>
                 </div>
             </div>
-            <div data-ez-item="phone">
-                <span data-ez-role="field">대표 전화</span>
-                <span data-ez-role="value">{$phone}</span>
-            </div>
-            <div data-ez-item="company_regno">
-                <span data-ez-role="field">사업자 등록번호</span>
-                <span data-ez-role="value">{$company_regno}</span>
-            </div>
-            <div data-ez-item="network_regno">
-                <span data-ez-role="field">통신판매업 신고번호</span>
-                <span data-ez-role="value">{$network_regno} {$biz_no_link}</span>
-            </div>
-            <div data-ez-item="cpo_name">
-                <span data-ez-role="field">개인정보보호책임자</span>
-                <span data-ez-role="value">{$cpo_name}</span>
+            <div class="cscenter_info">
+                <div data-ez-item="phone">
+                    <span data-ez-role="field"><strong>대표 전화</strong></span>
+                    <span data-ez-role="value">{$phone}</span>
+                </div>
+                <div data-ez-item="company_regno">
+                    <span data-ez-role="field"><strong>사업자 등록번호</strong></span>
+                    <span data-ez-role="value">{$company_regno}</span>
+                </div>
+                <div data-ez-item="network_regno">
+                    <span data-ez-role="field"><strong>통신판매업 신고번호</strong></span>
+                    <span data-ez-role="value">{$network_regno} {$biz_no_link}</span>
+                </div>
+                <div data-ez-item="cpo_name">
+                    <span data-ez-role="field"><strong>개인정보보호책임자</strong></span>
+                    <span data-ez-role="value">{$cpo_name}</span>
+                </div>
             </div>
         </div>
     </footer>

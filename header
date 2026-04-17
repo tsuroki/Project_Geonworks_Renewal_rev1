@@ -54,7 +54,7 @@
 				<div class="toparea_state_board">
 					<a data-ez-item="board" href="#none" style="color: rgb(106, 106, 106);">공지사항<i aria-hidden="true" class="icon icoArrowBottom"></i></a>
 					<ul module="Layout_BoardInfo">
-						<li><a href="{$link_board_list}">{$board_name}</a></li>
+						<li><a href="{$link_board_list}">{$board_name}<img src="{$board_icon}" alt="{$board_name}"></a></li>
 						<li><a href="{$link_board_list}">{$board_name}</a></li>
 					</ul>
 				</div>

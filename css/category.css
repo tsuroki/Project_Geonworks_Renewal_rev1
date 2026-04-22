@@ -1,0 +1,74 @@
+:root{
+    @font-face {
+    font-family: 'GMarketSans';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GMarketSans';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GMarketSans';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+}
+
+#manual_category {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+    margin: 0 100px;
+    padding: 50px 0;
+    border-bottom: 1px solid #000;
+}
+
+#manual_category .manual_category_list{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-self: center;
+}
+
+#manual_category .manual_category_list > li{
+    background-image: url(	{#imgSrc_1});
+    border-image-repeat: no-repeat;
+    
+    background-image: url(./);
+}
+#manual_category .manual_category_list > li:hover{
+}
+#manual_category .manual_category_list > li:hover > a {
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+#manual_category .manual_category_list > li > a {
+}
+#manual_category .manual_category_list > li:hover > a > span{
+    color: #fff;
+    object-fit: fill;
+}
+
+#manual_category .manual_category_list > li > a > span {
+    font-family: "GMarketSans";
+    font-size: 18px;
+    line-height: 18px;
+    padding: 10px 30px;
+    border-radius: 60px;
+    border: 1px solid #000;
+    transition: background-color 0.15s ease, color 0.15s ease;
+    
+}
+#manual_category .manual_category_list > li > a > span:hover {
+    background-color: #000;
+}

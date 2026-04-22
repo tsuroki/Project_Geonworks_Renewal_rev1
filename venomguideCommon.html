@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/category.css">
+</head>
+<body>
+    <div id="manual_category">
+        <ul class="manual_category_list menu">
+            <li module="board_category_1002"><a href="https://geonworks.cafe24.com/skin-skin3/front/php/b/board_list.php?board_no=1002&category_no=1"><span>입력 테스트</span></a></li>
+            <li module="board_category_1002"><a href="https://geonworks.cafe24.com/skin-skin3/front/php/b/board_list.php?board_no=1002&cate_no=5&category_no=2"><span>펌웨어 업데이트 및 키 맵핑</span></a></li>
+            <li module="board_category_1002"><a href="https://geonworks.cafe24.com/skin-skin3/front/php/b/board_list.php?board_no=1002&cate_no=5&category_no=3"><span>추가 기능</span></a></li>
+            <li module="board_category_1002"><a href="https://geonworks.cafe24.com/skin-skin3/front/php/b/board_list.php?board_no=1002&cate_no=5&category_no=4"><span>60MX 기본 키맵 레이어 안내</span></a></li>
+            <li module="board_category_1002"><a href="https://geonworks.cafe24.com/skin-skin3/front/php/b/board_list.php?board_no=1002&cate_no=5&category_no=5"><span>PCB 키맵 초기화</span></a></li>
+        </ul>
+    </div>
+
+    <!-- 기존 게시판 모듈 -->
+
+    <div module="Layout_BoardInfo" class="ec-base-tab typeMenu gScroll">
+        <ul class="menu">
+            <li><a href="{$board_list_url}" class="button">{$board_name}</a></li>
+            <li><a href="{$board_list_url}" class="button">{$board_name}</a></li>
+        </ul>
+    </div>
+
+    <div class="boardSort">
+        <span module="board_category_1002">{$form.board_category}</span>
+        <span module="board_ReplySort_1002">{$reply_sort}</span>
+    </div>
+
+    <!-- 원래 모듈 -->
+
+    <div module="board_search_1002">
+        <!--@css(/css/module/board/search.css)-->
+        <fieldset class="boardSearch">
+            <legend>게시물 검색</legend>
+            <div class="form">{$form.search_date} {$form.search_key} {$form.search} <a href="#none" class="btnNormal" onclick="{$action_search}">찾기</a></div>
+        </fieldset>
+    </div>
+</body>
+</html>

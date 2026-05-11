@@ -1,0 +1,98 @@
+:root{
+    @font-face {
+    font-family: 'GMarketSans';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GMarketSans';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GMarketSans';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+}
+
+#gb-body {
+    margin: 0 100px;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100vw;
+    .gb-title-wrapper {
+        .gb-title {
+            padding-top: 50px;
+            padding-right: 50px;
+            border-right: 1px solid #000;
+            display: flex;
+            flex-flow: column nowrap;
+            ;
+            > p {
+                font-size: 24px;
+                font-weight: 400;
+                font-family: "GmarketSans";
+            }
+            h1 {
+                font-size: 40px;
+                font-family: "GmarketSans";
+                font-weight: 600;
+            }
+        }
+    }
+    .gb-container{
+            width: 100%;
+            padding-top: 50px;
+            .gb-content {
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            > img {
+                width: 250px;
+                height: 250px;
+                background-color: #aaa;
+            }
+            .gb-content-inner {
+                width: 100%;
+                .content-title {
+                    > h2 {
+                        
+                    }
+                    > span {
+
+                    }
+                }
+                .progress-guage {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: flex-start;
+                    align-items: center;
+                    height: 20px;
+                    width: 100%;
+                    .in-progress {
+                        width: 100%;
+                        background-color: #000;
+                        height: 100%;
+                    }
+                    .to-proceed {
+                        width: 100%;
+                        background-color: #fff;
+                        height: 100%;
+                        outline: 1px solid #000;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -10,11 +10,11 @@
 .xans-product-detail .imgArea .prdImg img { cursor:pointer; }
 .xans-product-detail .imgArea .color { overflow:hidden; width:346px; margin:5px auto; }
 .xans-product-detail .imgArea .chips { float:left; width:28px; height:18px; margin:0 3px 3px 0; border:1px solid #e3e3e3; font-size:0; line-height:0; }
-.xans-product-detail .imgArea .thumbnail .wish img { width:auto !important; position:absolute; top:10px; left:10px; z-index:997; cursor:pointer; border:0 !important; }
+.xans-product-detail .imgArea .thumbnail .wish img { width:auto !important; position:absolute; top:10px; left:10px; z-index:997; cursor:pointer; border:0 !important; object-fit: contain;}
 
 
 /* infoArea */
-.xans-product-detail .infoArea p.delivery { padding:10px 0 20px; }
+.xans-product-detail .infoArea p.delivery { padding:10px 0 20px; border-bottom: 1px solid #000; box-shadow: 0 0 0 1px ; outline}
 .xans-product-detail .infoArea .guideArea { overflow:hidden; margin:10px 0 0; }
 .xans-product-detail .infoArea .guideArea .info { float:left; }
 .xans-product-detail .infoArea .guideArea .sizeGuide { float:right; }
